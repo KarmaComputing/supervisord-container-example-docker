@@ -12,7 +12,7 @@ http://supervisord.org/installing.html#creating-a-configuration-file
 
 ### Run
 ```
-docker run -it --entrypoint=/bin/bash test
+docker run --rm -v $PWD:/app/src -p 5000:5000 --name test test
 ```
 
 Type `supervisord --nodaemon`
