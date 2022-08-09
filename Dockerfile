@@ -6,6 +6,8 @@ COPY . .
 
 COPY supervisord.conf /etc/supervisord.conf
 
-RUN pip install supervisor==4.2.4
+RUN pip install -r requirements.txt
+
+RUN apt update && apt install -y redis
 
 ENTRYPOINT ["./entrypoint.sh"]

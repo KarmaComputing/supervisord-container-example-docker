@@ -1,3 +1,3 @@
 #!/bin/bash
 
-supervisord --nodaemon
+exec supervisord --nodaemon
