@@ -10,4 +10,6 @@ RUN pip install -r requirements.txt
 
 RUN apt update && apt install -y redis
 
+EXPOSE 5000
+
 ENTRYPOINT ["./entrypoint.sh"]
